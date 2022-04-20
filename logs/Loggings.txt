@@ -1,0 +1,10 @@
+2022-04-20/22:10:01		Data Load Successful
+2022-04-20/22:10:01		Train Test Split Successful
+2022-04-20/22:13:24		Model Training Successful
+2022-04-20/22:13:25		Classification report failed
+2022-04-20/22:13:25		Saved as model.pkl successfully
+2022-04-20/22:17:20		Data Load Successful
+2022-04-20/22:17:20		Train Test Split Successful
+2022-04-20/22:18:10		Model Training Successful
+2022-04-20/22:18:10		Accuracy of the model is 0.937150909658822
+2022-04-20/22:18:10		Saved as model.pkl successfully

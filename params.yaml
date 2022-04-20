@@ -1,0 +1,25 @@
+base:
+  project: Maintenance Prediction
+  random_state: 42
+  target_col: review_score
+
+data_source:
+  source: data_ingestion/data.csv
+  preprocessed: data/preprocessed_data.csv
+  final: data/final_data.csv
+
+split_data:
+  test_size: 0.2
+  random_state: 42
+
+metrics:
+  report: reports/reports.csv
+
+model_params:
+  n_estimators: 100
+
+cassandra_database:
+  CLIENT_ID: "cgwEMPBBgoZkxuZfSkYgcPZs"
+  CLIENT_SECRET: ".wAHhaNdBwrAY6I1QT51k+ZR5dtoHQ8JxaE,4EkZZqAkee9fx_F-leK,McbenZdKRBKn7w5aGC1-k_aS8kLWOS0laov7CSt79Pz7.MYeTZDjJ9sv_.tKO7cDNHhrqi6-"
+  table_name: "maintenance_prediction"
+  keyspace: "ineuron"

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Predictive Maintenance</title>
+        <link rel="stylesheet" href="../static/styles/style.css">
+    </head>    
+    
+    <body>
+        <center>      
+
+           
+        <h1 style="font-size: 35px; color: rgb(9, 19, 156); text-align: center;"> Predictive Maintenance</h1>
+        <h2 style="font-size:25px;">This web application predicts the Remaining Useful Life of the system.</h2>
+        <p style="font-size: large; font-family:'Times New Roman'; background-color: rgb(136, 215, 247);">Fill the following details and get your results</p> <br>
+
+
+        <form method='POST', action="{{url_for('prediction')}}">
+            
+            <label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="engineNumber">Engine number (1-100):</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="engineNumber" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor2">Sensor 2:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor2" placeholder="enter" step="any"> <br><br>
+            
+            <label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor3">Sensor 3:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor3" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor4">Sensor 4:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor4" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor6">Sensor 6:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor6" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor7">Sensor 7:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor7" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor8">Sensor 8:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor8" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor9">Sensor 9:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor9" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor10">Sensor 10:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor10" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor11">Sensor 11:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor11" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor12">Sensor 12:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor12" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor13">Sensor 13:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor13" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor14">Sensor 14:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor14" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor15">Sensor 15:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor15" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor17">Sensor 17:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor17" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor20">Sensor 20:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor20" placeholder="enter" step="any"> <br><br>
+			
+			<label style="font-size: large; background-color: rgb(21, 219, 245); padding:5px 15px; margin: 10px 5px 15px 5px;" for="sensor21">Sensor 21:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="sensor21" placeholder="enter" step="any"> <br><br>
+            
+
+            <input type="submit" , value= 'Predict' style="font-size: larger; padding: 5px 15px;margin-top: 15px;"> <br><br></br>
+            <input type="reset" , value='Reset' style="padding: 5px 15px;margin-top: 15px;">
+        </form>
+       
+    </center>
+
+</body>
+
+<footer style="text-align: center">
+  <p>WebApp Designed and Maintained by Irfan Razi</p>
+</footer>
+
+</html>
